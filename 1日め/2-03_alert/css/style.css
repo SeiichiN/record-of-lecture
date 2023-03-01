@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+body, h1, h2, h3, ul, p { margin: 0; }
+header,
+footer {
+    background-color: lightblue;
+}
+header .container {
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: left center;
+    padding: 20px 0;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 1.2em;
+    padding-left: 60px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
