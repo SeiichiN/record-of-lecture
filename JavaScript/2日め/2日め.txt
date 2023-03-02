@@ -1,0 +1,33 @@
+2-ex
+  document.getElementById()
+  document.getElementsByTagName() -- HTMLCollection
+  document.getElementsByClassName() -- HTMLCollection
+  HTMLCollection -- 番号で指定するので、使うのに工夫がいる。
+  
+  クラスはオブジェクトの設計図。
+  オブジェクトには、プロパティとメソッドをもたせることができる。
+
+3-01_if
+  window.confirm()メソッドについて
+  if文
+  フローチャートの書き方(条件分岐)
+
+3-02_let-const
+  変数 - 再代入できる。
+  定数 - 再代入できない。
+  else if 文
+
+3ー03_comparison
+  Math.floor() -- 小数点以下切り捨て
+  Math.random() -- 0〜1未満の数を生成。(乱数)
+  parseInt() -- 文字の数字を整数に変換する。
+                小数点の場合は切り捨て。
+                数字以外の文字の場合は、NaNを返す。
+  if文の条件式の書き方
+  answerが0未満、6以上の場合をはじきとばす方法。(2通り)。
+
+
+
+ 
+
+;; 修正時刻: Thu 2023/03/02 16:38:41
