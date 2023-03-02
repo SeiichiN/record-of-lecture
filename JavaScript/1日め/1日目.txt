@@ -4,25 +4,27 @@
   documentオブジェクト
 
 (2) メソッド
-  console log()メソッド
+  console - log()メソッド
     コンソールに数値や文字を出力できる。
     
-  window  alert()メソッド
+  window - alert()メソッド
     ダイアログ・ウィンドウを表示して、そこに文字や数値を出力できる。
     
-  document getElementById()メソッド
+  document - getElementById()メソッド
     Bodyのなかのid要素を取得できる。(=> オブジェクト)
 
-  document getElementsByClassName()メソッド
+  document - getElementsByClassName()メソッド
     document.getElementsByClassName('container') 
 
-  document getElementsByTagName()メソッド
+  document - getElementsByTagName()メソッド
     document.getElementsByTagName('p')
            
   
 (3) プロパティ
-  textContentプロパティ
-  styleプロパティ -> colorプロパティ
+  elementオブジェクト
+      +- textContentプロパティ
+          +- styleプロパティ
+              +- colorプロパティ
 
 
 (4) Dateクラス <- オブジェクトを生成するためのひな型(設計図)
@@ -34,4 +36,4 @@
 
 
 
-;; 修正時刻: Thu 2023/03/02 06:38:54
+;; 修正時刻: Thu 2023/03/02 09:02:34
