@@ -35,5 +35,13 @@
     オブジェクトは作り出すこともできる。 -> Robotオブジェクト
 
 
+(6) 補足説明が必要な項目
+  (a) document.getElementsByTagName()
+      document.getElementsByClassName()
 
-;; 修正時刻: Thu 2023/03/02 09:02:34
+  (b) new Date() -- クラス・オブジェクト
+
+
+
+
+;; 修正時刻: Thu 2023/03/02 09:15:26
