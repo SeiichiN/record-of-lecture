@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>おみくじ</h1>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+          <!--
+          <button onclick="location.reload()">おみくじを引く</button>
+          -->
+          <div id="msg"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <small>&copy; 2023 Seiichi Nukayama</small>
+        </div>
+    </footer>
+    <script>
+      'use strict';
+
+      let message;
+      if (window.confirm('おみくじをひく？')) {
+        const num = Math.floor(Math.random() * 5);  // 0...4
+        if (num === 0) {
+          message = '大吉';
+        } else if (num === 1) {
+          message = '中吉';
+        } else if (num === 2) {
+          message = '小吉';
+        } else if (num === 3) {
+          message = '末吉';
+        } else {
+          message = '凶';
+        }
+      } else {
+        message = 'お疲れ様でした';
+      }
+      document.getElementById('msg').textContent = message;
+   </script>
+</body>
+</html>

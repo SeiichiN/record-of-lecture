@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>コンソールにアウトプット</h1>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+          <div id="alert"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <small>&copy; 2023 Seiichi Nukayama</small>
+        </div>
+    </footer>
+    <script>
+      'use strict';
+
+      const hour = 20;  // new Date().getHours();  // 現在の時
+      let message;
+      if (hour >= 19 && hour < 21) {
+        message = 'お弁当30%OFF!';
+      } else if (hour === 9 || hour === 15) {
+        message = 'お弁当1個買ったら1個おまけ!';
+      } else {
+        message = 'お弁当はいかがですか';
+      }
+      window.alert(message);
+      // document.getElementById('alert').textContent = message;   
+   </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>誕生年</h1>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+          <div id="msg"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <small>&copy; 2023 Seiichi Nukayama</small>
+        </div>
+    </footer>
+    <script>
+      'use strict';
+
+      let year = parseInt(window.prompt('西暦何年生まれですか？'));
+
+      console.log(year);
+      let message;
+      if (year >= 1926 && year < 1989) {
+        message = '昭和生まれです。';
+      } else if (year >= 1989 && year < 2019) {
+        message = '平成生まれです。';
+      } else if (year >= 2019 && year < 2023) {
+        message = '令和生まれです。';
+      } else {
+        message = 'ちゃんと数字を入力してください。';
+      }
+      document.getElementById('msg').textContent = message;
+   </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+(1) if文を使った処理の練習。
+
+(2) プログラムの結果を表示するのに、以下の方法がある。
+  (a) console.log(message)
+  (b) window.alert(message)
+  (c) document.getElementById('msg').textContent = message
+
+
+  
+
+;; 修正時刻: Fri 2023/03/03 17:03:14
