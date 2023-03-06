@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ファンクション</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ファンクション</h1>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <p id="output"></p>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <small>&copy; 2023 Seiichi Nukayama</small>
+        </div>
+    </footer>
+    <script>
+      'use strict';
+
+      // console.log(price);  // 無理
+      console.log('コーヒーメーカーの値段は' + total(8000) + '円(税込み)です。');
+      document.getElementById('output').textContent =
+      'コーヒーメーカーの値段は' + total(8000) + '円(税込み)です。';
+    
+      function total(price) {  // let price
+        const tax = 0.1;
+        return price + price * tax;
+      }
+
+   </script>
+</body>
+</html>

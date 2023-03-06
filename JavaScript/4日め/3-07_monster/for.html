@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>モンスターを倒せ(for)</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>for文でモンスターを倒せ</h1>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <small>&copy; 2023 Seiichi Nukayama</small>
+        </div>
+    </footer>
+    <script>
+      'use strict';
+
+      let enemy = 100;
+      alert('戦闘スタート');
+
+      // 繰り返しの回数が決まっているときに使う
+      for (let i = 1; i <= 5; i++) {
+        console.log(i + '回目の攻撃');
+        const attack = Math.floor(Math.random() * 30) + 1;
+        enemy -= attack;   // enemy = enemy - attack
+        console.log('モンスターに' + attack + "のダメージ! enemy=" + enemy);
+      
+      }
+   </script>
+</body>
+</html>
