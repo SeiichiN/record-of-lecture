@@ -1,0 +1,40 @@
+(1) 変数定数の有効範囲
+
+  => 問題.txt
+
+
+(2) テンプレート文字列
+
+   let money = 100;
+
+   const text = `所持金は${money}円です。`;
+   console.log(text);
+
+
+(3) 配列
+
+  const team = ['桃太郎', 'さる', 'いぬ'];
+
+  console.log(team[1]);    // さる
+  team.push('きじ');       // ['桃太郎', 'さる', 'いぬ', 'きじ']
+
+  一覧する
+  (a)
+    for (let member of team) {
+      console.log(member);
+    }
+
+  (b)
+    for (let i = 0; i < team.length; i++) {
+      console.log(team[i]);
+    }
+
+  (c)
+    let i = 0;
+    while (i < team.length) {
+      console.log(team[i])
+      i += 1;
+    }
+  
+
+;; 修正時刻: Wed 2023/03/08 05:17:13

@@ -1,0 +1,52 @@
+(1) 変数定数の有効範囲
+
+(a)
+  function total(money) {
+    const tax = 0.1;
+    money = money + 900;
+    return money + money * tax;
+  }
+
+  let money = 100;
+  console.log(total(money));  // 1100
+  console.log(money);         // 100
+  console.log(tax)            // not defined
+
+
+(b)
+  function disp_money() {
+    money = money + 9000;
+    console.log(money);       // 10000
+  }
+
+  let money = 1000;
+  disp_money();
+  console.log(money);         // 10000
+
+
+(c)
+  function disp_money() {
+    let money = 1000;
+    console.log(money);       // 1000
+  }
+
+  let money = 5000;
+  disp_money();
+  console.log(money);         // 5000
+
+
+(d)
+  function disp_money(money) {
+    money = 10000;
+    console.log(money);       // 10000
+  }
+
+  let money = 100;
+  disp_money(money);
+  console.log(money);         // 100
+
+
+
+  
+
+;; 修正時刻: Wed 2023/03/08 05:17:13
