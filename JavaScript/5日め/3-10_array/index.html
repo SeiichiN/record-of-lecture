@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>配列</h1>
+      </div>
+    </header>
+    <main class="container">
+      <section>
+        <h1>やることリスト</h1>
+        <ul id="list"></ul>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <small>&copy; 2023 Seiichi Nukayama</small>
+      </div>
+    </footer>
+    <script>
+      "use strict";
+
+      let todo = [
+        "デザインカンプ作成",
+        "データ整理",
+        "勉強会申込み",
+        "牛乳買う",
+      ];
+      todo.push("歯医者に行く");
+      for (let item of todo) {
+        const li = `<li>${item}</li>`;
+        document.getElementById('list')
+          .insertAdjacentHTML('beforeend', li);
+      }
+
+      /*
+     let i = 0;
+     while (i < todo.length) {
+      console.log(todo[i]);
+      i += 1;
+     }
+     */
+      /*
+    for (let i = 0; i < todo.length; i++) {
+      console.log(todo[i]);
+    }
+    */
+    </script>
+  </body>
+</html>

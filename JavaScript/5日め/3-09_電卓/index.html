@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電卓</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>電卓</h1>
+      </div>
+    </header>
+    <main class="container">
+      <section></section>
+    </main>
+    <footer>
+      <div class="container">
+        <small>&copy; 2023 Seiichi Nukayama</small>
+      </div>
+    </footer>
+    <script>
+      "use strict";
+
+      function calc(mode, num1, num2) {
+        let result;
+        if (mode === "+") {
+          result = num1 + num2;
+        } else if (mode === "-") {
+          result = num1 - num2;
+        } else if (mode === "*") {
+          result = num1 * num2;
+        } else if (mode === "/") {
+          result = num1 / num2;
+        } else {
+          result = "+ - * / でお願いします。";
+        }
+        return result;
+      }
+
+      let mode = prompt("+ - * /");
+      let num1 = parseInt(prompt("１つめの数字"));
+      let num2 = parseInt(prompt("２つめの数字"));
+      let result = calc(mode, num1, num2);
+      const text = `${num1} ${mode} ${num2} = ${result}`;
+      alert(text);
+    </script>
+  </body>
+</html>
