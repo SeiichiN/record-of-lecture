@@ -1,0 +1,54 @@
+(1) 変数定数の有効範囲
+
+以下の console.log() では、それぞれ何と出力されるか？
+
+(a)
+  function total(money) {
+    const tax = 0.1;
+    money = money + 900;
+    return money + money * tax;
+  }
+
+  let money = 100;
+  console.log(total(money));  // (1)
+  console.log(money);         // (2)
+  console.log(tax)            // (3)
+
+
+(b)
+  function disp_money() {
+    money = money + 9000;
+    console.log(money);       // (4)
+  }
+
+  let money = 1000;
+  disp_money();
+  console.log(money);         // (5)
+
+
+(c)
+  function disp_money() {
+    let money = 1000;
+    console.log(money);       // (6)
+  }
+
+  let money = 5000;
+  disp_money();
+  console.log(money);         // (7)
+
+
+(d)
+  function disp_money(money) {
+    money = 10000;
+    console.log(money);       // (8)
+  }
+
+  let money = 100;
+  disp_money(money);
+  console.log(money);         // (9)
+
+
+
+  
+
+;; 修正時刻: Wed 2023/03/08 05:17:13

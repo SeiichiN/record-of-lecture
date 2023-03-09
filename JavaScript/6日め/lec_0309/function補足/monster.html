@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>monster</title>
+  </head>
+  <body>
+    <h1>Monster</h1>
+    <script>
+    'use strict';
+
+      function hero_attack(enemy) {
+        const attack = Math.floor(Math.random() * 30) + 1;   // 1...30
+        console.log(`勇者による攻撃。モンスターに${attack}のダメージ。`);
+        enemy -= attack;
+        console.log(`モンスターのHPは${enemy}になった。`);
+        return enemy;
+      }
+
+      let enemy = 100;
+
+      while (enemy > 0) {
+        enemy = hero_attack(enemy);
+      }
+
+      console.log('勇者はモンスターを倒した。');
+    </script>
+  </body>
+</html>
+
+<!-- 修正時刻: Thu 2023/03/09 05:40:55 -->

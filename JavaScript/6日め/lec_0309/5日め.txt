@@ -7,7 +7,7 @@
 
    let money = 100;
 
-   const text = `所持金は$0024{money}円です。`;
+   const text = `所持金は${money}円です。`;
    console.log(text);
 
 
