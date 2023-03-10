@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>countdown</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>カウントダウンタイマー</h1>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <h2><span>知ってました？</span><br>
+        2025年大阪万博開催まで</h2>
+      <p class="timer">あと
+        <span id="day"></span>日
+        <span id="hour"></span>時間
+        <span id="min"></span>分
+        <span id="sec"></span>秒
+      </p>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <small>&copy; 2023 Seiichi Nukayama</small>
+    </div>
+  </footer>
+  <script>
+    'use strict';
+
+    // due -- 今日の23:59:59
+    function countdown(due) {
+      const now = new Date();    // 現在日付オブジェクト
+
+      const rest = due.getTime() - now.getTime();  // ミリ秒
+      const sec = Math.floor(rest / 1000) % 60;
+      const min = Math.floor(rest / 1000 / 60) % 60;
+      const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+      const days = Math.floor(rest / 1000 / 60 / 60 / 24);
+      // const count = [days, hours, min, sec];
+      const count = {days: days, hours: hours, min: min, sec: sec};
+      return count;
+    }
+
+    const goal = new Date(2025, 4, 3);
+    // console.log(countdown(goal));
+
+    function recalc() {
+      const counter = countdown(goal);      
+      document.getElementById('day').textContent = counter.days;
+      document.getElementById('hour').textContent = counter.hours;
+      document.getElementById('min').textContent =
+        String(counter.min).padStart(2, '0');
+      document.getElementById('sec').textContent =
+        String(counter.sec).padStart(2, '0');
+      refresh();
+    }
+
+    function refresh() {
+      setTimeout(recalc, 1000);
+    }
+
+    recalc();
+  </script>
+</body>
+</html>

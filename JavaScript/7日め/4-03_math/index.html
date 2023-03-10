@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Math</h1>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <p>円周率は <span id="pi"></span> です。</p>
+      <p>ふつうに切り捨てると <span id="floor"></span> です。</p>
+      <p>小数第2位で切り捨てると <span id="output"></span> です。</p>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <small>&copy; 2023 Seiichi Nukayama</small>
+    </div>
+  </footer>
+  <script>
+    'use strict';
+
+    document.getElementById('pi').textContent = Math.PI;
+    document.getElementById('floor').textContent = Math.floor(Math.PI);
+    document.getElementById('output').textContent = point(Math.PI, 2);
+
+    /*
+     * num -- 対象となる数(小数点あり)
+     * digit -- 小数点第何位までもとめるか？
+     * return -- 小数点第digit位までの数
+     */
+    function point (num, digit) {
+      const mover = 10 ** digit;
+      return Math.floor(num * mover) / mover;
+    }
+
+    // num -- 2.459632
+    function myRound(num) {
+      return Math.round(num * 10) / 10;
+/*       let _num = num * 10 + 0.5;
+      _num = Math.floor(_num) / 10;
+      return _num;
+ */    }
+  </script>
+</body>
+</html>

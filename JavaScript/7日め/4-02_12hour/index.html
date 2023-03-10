@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>コンソールにアウトプット</h1>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+          <p>最終アクセス日時：<span id="time"></span></p>  
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <small>&copy; 2023 Seiichi Nukayama</small>
+        </div>
+    </footer>
+    <script>
+      'use strict';
+
+      const now = new Date();
+      console.log(now);
+      const birth = new Date(2013,3,4);
+      console.log(birth);
+      const year = now.getFullYear();
+      const month = now.getMonth();
+      const date = now.getDate();
+      const hour = now.getHours();
+      const min = now.getMinutes();
+      const sec = now.getSeconds();
+
+      let ampm = '';
+      if (hour < 12) {
+        ampm = 'a.m.';
+      } else {
+        ampm = 'p.m.';
+      }
+
+      const output = `${year}/${month + 1}/${date} ${hour % 12}:${min}${ampm}`;
+      document.getElementById("time").textContent = output;
+   </script>
+</body>
+</html>
