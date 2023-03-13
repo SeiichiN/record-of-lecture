@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    section img {
+      max-width: 100%;
+    }
+    .center {
+      margin: 0 auto;
+      max-width: 90%;
+      width: 500px;
+    }
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    li {
+      flex: 1 1 auto;
+      margin-right: 8px;
+    }
+    li:last-of-type {
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>コンソールにアウトプット</h1>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <div class="center">
+        <div>
+          <img src="img1.jpg" id="bigimg" alt="">
+        </div>
+        <ul>
+          <li><img src="thumb-img1.jpg" class="thumb" alt=""></li>
+          <li><img src="thumb-img2.jpg" class="thumb" alt=""></li>
+          <li><img src="thumb-img3.jpg" class="thumb" alt=""></li>
+          <li><img src="thumb-img4.jpg" class="thumb" alt=""></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <small>&copy; 2023 Seiichi Nukayama</small>
+    </div>
+  </footer>
+  <script>
+    'use strict';
+
+    const images = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg'];
+
+    const thumbs = document.querySelectorAll('.thumb');
+    thumbs.forEach( function(item, index) {
+      item.onclick = function() {
+        console.log(images[index]);
+      };
+    } );
+
+    /*
+    for (let i = 0; i < thumbs.length; i++){
+      thumbs[i].onclick = function () {
+        console.log(this);
+      }
+    }
+    */
+  </script>
+</body>
+</html>

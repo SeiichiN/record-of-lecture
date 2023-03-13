@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-body {
-  font-family: 'MyricaM M', 'ƒqƒ‰ƒMƒmŠpƒS', sans-serif;
-}
-
 body, h1, h2, h3, ul, p { margin: 0; }
 header,
 footer {

@@ -1,11 +1,19 @@
-(1) Dateオブジェクト
+(1) Dateオブジェクトの使い方
 
-(2) Mathオブジェクト
+  const now = new Date();    // 現在
+  const past = new Date(1985, 6, 1);   // 過去
+  const period = now.getTime();   // 1970.1.1 からの経過ミリ秒
 
-(3) setTimeout()メソッド、setInterval()メソッド
+(2) Mathオブジェクトの使い方
+  Math.PI
+  Math.floor()
 
-(4) onChange()メソッド。
-    location.hrefプロパティ。
+(3) カウントダウンタイマーの作り方
+  setTimeout()メソッド
+  setInterval()メソッド
+
+(4) セレクトメニューを変更した時点で function() を実行する。(onchange()メソッド)
 
 
-修正時刻: Mon 2023/03/13 08:10:43
+
+修正時刻: Fri 2023/03/10 16:40:39
